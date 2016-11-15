@@ -1,0 +1,19 @@
+﻿@model  IEnumerable<Survey>
+
+
+<div style="height:400px; background-color:darkslategray">
+    <h3 style="font-family:Oswald, sans-serif; text-align:center; color:azure; line-height:200px">Thank you. <br /> Your responses have been submitted.</h3>
+</div>
+<div>
+    <a asp-controller="Home" asp-action="Survey" class="btn btn-default"
+       style="display:block; font-family:Oswald, sans-serif">
+        Take Another Survey
+    </a>
+    <a asp-controller="Results" asp-action="Index" class="btn btn-default"
+       style="display:block; font-family:Oswald, sans-serif">
+        See our Results
+    </a>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-default" style="display:block; font-family:Oswald, sans-serif">
+        Return Home
+    </a>
+</div>

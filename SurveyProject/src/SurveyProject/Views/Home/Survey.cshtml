@@ -1,0 +1,115 @@
+﻿@{
+    ViewData["Title"] = "Idea Center Survey";
+}
+
+@model SurveyProject.Models.Survey
+
+
+<h2 style="font-family:Roboto, sans-serif">Idea Center Survey</h2>
+
+<form asp-controller="Survey" asp-action="Create" style="font-family:Roboto, sans-serif; font-size:medium">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Program" class="col-md-2 control-label"></label> 
+        <input asp-for="Program" type="radio" value ="Design for Miami" /> Design for Miami
+        <input asp-for="Program" type="radio" value="Innovation M" /> Innovation M
+        <input asp-for="Program" type="radio" value="Make1" /> Make1
+        <input asp-for="Program" type="radio" value="CS50x Miami" /> CS50x Miami
+        <input asp-for="Program" type="radio" value="WebDev" /> WebDev
+        <input asp-for="Program" type="radio" value="MarketHack" /> MarketHack
+    </div>
+    <div class="form-group">
+        <label asp-for="Email" class="col-md-2 control-label"></label>
+        <input asp-for="Email" type="text" /><br />
+    </div>
+    <div class="form-group">
+        <label asp-for="Age" class="col-md-2 control-label"></label>
+        <input asp-for="Age" type="text" /><br />
+    </div>
+    <div class="form-group">
+        <label asp-for="Gender" class="col-md-2 control-label"></label>
+        <input asp-for="Gender" type="radio" value="0" /> Male
+        <input asp-for="Gender" type="radio" value="1" /> Female
+        <input asp-for="Gender" type="radio" value="2" /> Other
+     </div>  
+    <div class="form-group">
+        <label asp-for="Responses0"> I had opportunities to work collaboratively as a member of a team. </label>
+        <div>
+            <input asp-for="Responses0" type="radio" value="0" /> No
+            <input asp-for="Responses0" type="radio" value="1" /> Yes
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Responses1"> I learned how to communicate more effectively with others. </label>
+        <div>
+            <input asp-for="Responses1" type="radio" value="0" /> No
+            <input asp-for="Responses1" type="radio" value="1" /> Yes
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Responses2"> This program encouraged me to think critically. </label>
+        <div>
+            <input asp-for="Responses2" type="radio" value="0" /> No
+            <input asp-for="Responses2" type="radio" value="1" /> Yes
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Responses3"> I learned how to apply an idea in a real world setting. </label>
+        <div>
+            <input asp-for="Responses3" type="radio" value="0" /> No
+            <input asp-for="Responses3" type="radio" value="1" /> Yes
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Responses4"> I learned how to network and identify potential partners and business opportunities. </label>
+        <div>
+            <input asp-for="Responses4" type="radio" value="0" /> No
+            <input asp-for="Responses4" type="radio" value="1" /> Yes
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Responses5"> This program encouraged me to become an entrepreneur. </label>
+        <div>
+            <input asp-for="Responses5" type="radio" value="0" /> No
+            <input asp-for="Responses5" type="radio" value="1" /> Yes
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Responses6"> I have a better understanding of strategic planning and how to market my ideas. </label>
+        <div>
+            <input asp-for="Responses6" type="radio" value="0" /> No
+            <input asp-for="Responses6" type="radio" value="1" /> Yes
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Responses7"> This program improved my skills related to information, media and/or technology. </label>
+        <div>
+            <input asp-for="Responses7" type="radio" value="0" /> No
+            <input asp-for="Responses7" type="radio" value="1" /> Yes
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Responses8"> This program improved my interpersonal and/or social skills. </label>
+        <div>
+            <input asp-for="Responses8" type="radio" value="0" /> No
+            <input asp-for="Responses8" type="radio" value="1" /> Yes
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Responses9"> This program improved my skills related to problem solving, creativity and innovative thinking. </label>
+        <div>
+            <input asp-for="Responses9" type="radio" value="0" /> No
+            <input asp-for="Responses9" type="radio" value="1" /> Yes
+        </div>
+    </div>
+        <div class="form-group">
+        <label asp-for="Comments"> Provide any additional comments. </label>
+        <div>
+            <input asp-for="Comments" type ="text"/>
+        </div>
+    </div>
+        <input type = submit value = "Submit Survey" class= "btn btn-default">
+</form>
+<a asp-controller="Home" asp-action="Index" class="btn btn-default">
+    Return Home
+</a>

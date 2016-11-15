@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Idea Center Survey";
+}
+
+@model SurveyProject.Models.Results
+
+
+
+<div>
+    <h2 style="font-family:Oswald, sans-serif; text-align:center">@Model.Program Results</h2>
+    <div style="display:inline; text-align:center;">
+        <h4 style="font-family:Oswald, sans-serif; text-align:left; padding-left:53px; font-size:16px; color:darkslategrey">Filter Results by Program</h4>
+        <form asp-action="GetResults" asp-controller="Results" style="font-family:Oswald, sans-serif; padding:5px">
+            <input type="submit" name="program" Value="Design for Miami" Method="Post" style="display:inline; width:12%" class="btn btn-default" />
+            <input type="submit" name="program" Value="Make1" Method="Post" style="display:inline; width:12%" class="btn btn-default" />
+            <input type="submit" name="program" Value="Innovation M" Method="Post" style="display:inline; width:12%" class="btn btn-default" />
+            <input type="submit" name="program" Value="CS50x Miami" Method="Post" style="display:inline; width:12%" class="btn btn-default" />
+            <input type="submit" name="program" Value="WebDev" Method="Post" style="display:inline; width:12%" class="btn btn-default" />
+            <input type="submit" name="program" Value="MarketHack" Method="Post" style="display:inline; width:12%" class="btn btn-default" />
+            <input type="submit" name="program" Value="Overall" Method="Post" style="display:inline; width:12%;" class="btn btn-default" />
+    
+        </form>
+    </div>
+    <div style="font-family:Oswald, sans-serif; padding:20px">
+        <div id="label" style="text-align:center; font-size: 26px">Experiential Learning</div>
+        <div class="myProgress" style="background-color:lavender; width:100%; height:30px;">
+            <div id="EntrepreneurialBar" style="background-color:green; width:@Model.Experiential%; height:30px;">
+                <div id="label" style="color:azure; text-align:center; line-height:30px">@String.Format("{0:0.0}", Model.Experiential)%</div>
+            </div>
+        </div>
+        <ul>
+            <li>@String.Format("{0:0.0}", Model.Response0)% had opportunities to work collaboratively as a member of a team. </li>
+            <li>@String.Format("{0:0.0}", Model.Response1)% learned how to communicate more effectively with others.</li>
+            <li>@String.Format("{0:0.0}", Model.Response2)% were encouraged to think critically.</li>
+            <li>@String.Format("{0:0.0}", Model.Response3)% learned how to apply an idea in a real world setting.</li>
+        </ul>
+    </div>
+    <div style="font-family:Oswald, sans-serif; padding:20px">
+        <div id="label" style="text-align:center; font-size: 26px">Entrepreneurial Education</div>
+        <div class="myProgress" style="background-color:lavender; width:100%; height:30px;">
+            <div id="EntrepreneurialBar" style="background-color:goldenrod; width:@Model.Entrepreneurial%; height:30px;">
+                <div id="label" style="color:azure; text-align:center; line-height:30px">@String.Format("{0:0.0}", Model.Entrepreneurial)%</div>
+            </div>
+        </div>
+        <ul>
+            <li>@String.Format("{0:0.0}", Model.Response4)% learned how to network and identify potential partners and business opportunities.</li>
+            <li>@String.Format("{0:0.0}", Model.Response5)% felt encouraged to become an entrepreneur.</li>
+            <li>@String.Format("{0:0.0}", Model.Response6)% gained a better understanding of strategic planning and how to market ideas.</li>
+        </ul>
+    </div>
+    <div style="font-family:Oswald, sans-serif; padding:20px">
+        <div id="label" style="text-align:center; font-size: 26px">21st Century Skills</div>
+        <div class="myProgress" style="background-color:lavender; width:100%; height:30px;">
+            <div id="EntrepreneurialBar" style="background-color:red; width:@Model.TwentyFirst%; height:30px;">
+                <div id="label" style="color:azure; text-align:center; line-height:30px">@String.Format("{0:0.0}", Model.TwentyFirst)%</div>
+            </div>
+        </div>
+        <ul>
+            <li>@String.Format("{0:0.0}", Model.Response7)% improved skills related to information, media and / or technology.</li>
+            <li>@String.Format("{0:0.0}", Model.Response8)% improved interpersonal and / or social skills.</li>
+            <li>@String.Format("{0:0.0}", Model.Response9)% improved skills related to problem solving, creativity and innovative thinking.</li>
+        </ul>
+    </div>
+</div>
+
+
+
+<a asp-controller="Home" asp-action="Index" class="btn btn-default; widebutton" style="display:block; font-family:Oswald, sans-serif">
+    Return Home
+</a>
+<a asp-controller="Home" asp-action="Survey" class="btn btn-default" style="display:block; font-family:Oswald, sans-serif">
+    Take a Survey
+</a>

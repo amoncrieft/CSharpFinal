@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Idea Center Survey";
+}
+
+@model SurveyProject.Models.Survey
+
+
+<h2 style="font-family:Roboto, sans-serif">Idea Center Survey</h2>
+
+
+
+
+
+
+<form asp-controller="Survey" asp-action="GenerateSurveys" style="font-family:Roboto, sans-serif; font-size:medium">
+    <input type="text" name="n" />
+    <input type="submit"Value="Generate" class="btn btn-default" />
+</form>
+<a asp-controller="Home" asp-action="Index" class="btn btn-default">
+    Return Home
+</a>

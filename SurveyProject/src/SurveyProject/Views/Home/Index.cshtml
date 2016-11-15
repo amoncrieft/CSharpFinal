@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Idea Center Survey";
+}
+<div style="height:350px; background-color:darkslategray; color:cyan">
+    <h1 style="font-family:Roboto, sans-serif; text-align:center; font-size:50px; line-height:200px">THE IDEA CENTER SURVEY PROJECT</h1>
+    <h2 style="font-family:Oswald, sans-serif; text-align:center; color:azure">we appreciate your feedback</h2>
+</div>
+<div style="height:200px">
+    <a asp-controller="Home" asp-action="Survey" class="btn btn-default" 
+       style="display:block; font-family:Oswald, sans-serif">
+        Take A Survey
+    </a>
+    <a asp-controller="Home" asp-action="GenerateSurveys" class="btn btn-default" 
+       style="display:block; font-family:Oswald, sans-serif">
+        Generate Surveys
+    </a>
+    <a asp-controller="Results" asp-action="Index" class="btn btn-default"
+       style="display:block; font-family:Oswald, sans-serif">
+        See our Results
+    </a>
+</div>
